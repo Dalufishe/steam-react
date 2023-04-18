@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import Navbar from "./layout/Navbar/Navbar";
+import Categories from "./layout/Categories/Categories";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       {/* Navbar */}
       <Navbar />
       {/* Categories */}
+      <Categories />
       {/* Recommended */}
       {/* SpecialOffers */}
       {/* Browse */}
