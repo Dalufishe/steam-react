@@ -41,11 +41,11 @@ export default function NavbarLeft() {
           "flex",
           "items-center",
           "font-semibold",
-          "text-[30px]",
+          "text-[24px]",
           "text-text1"
         )}
       >
-        <img src={LogoImage} alt="logo" className="w-14 h-14 mr-3" />
+        <img src={LogoImage} alt="logo" className="w-10 h-10 mr-3" />
         <div className="flex">
           <p>FTEAM</p>
           <span className="text-xs">&#174;</span>

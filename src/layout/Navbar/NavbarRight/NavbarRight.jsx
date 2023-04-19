@@ -10,7 +10,7 @@ export default function NavbarRight() {
       className={classNames(
         "text-text1",
         "absolute top-2 right-0",
-        "flex items-center gap-3",
+        "flex items-center gap-2",
         "hidden lg:flex"
       )}
     >
@@ -18,8 +18,8 @@ export default function NavbarRight() {
       <div
         className={classNames(
           "bg-[#5c7e10]",
-          "flex items-center gap-2",
-          "px-2 py-1",
+          "flex items-center gap-1",
+          "px-1 py-0.5",
           "hover:text-white",
           "cursor-pointer"
         )}
@@ -40,7 +40,7 @@ export default function NavbarRight() {
         )}
       >
         <p>語言</p>
-        <AiOutlineCaretDown size="12px" />
+        <AiOutlineCaretDown size="9px" />
       </div>
     </div>
   );

@@ -16,11 +16,11 @@ const categoriesItems = [
 export default function Categories() {
   return (
     // container
-    <div className={classNames("w-full flex justify-center")}>
+    <div className={classNames("text-[80%] w-full flex justify-center")}>
       {/* categories bar */}
       <div
         className={classNames(
-          "w-[1200px] my-10",
+          "w-[940px] my-8",
           "flex justify-between",
           "text-white",
           "shadow-slate-950",
@@ -42,7 +42,7 @@ export default function Categories() {
             //   menu item
             <li
               className={classNames(
-                "pl-[15px] pr-[10px] py-3",
+                "pl-[15px] pr-[10px] py-1",
                 "flex items-center",
                 "cursor-pointer",
                 //   background
@@ -66,7 +66,7 @@ export default function Categories() {
         <div
           className={classNames(
             "bg-[#316282]",
-            "m-1.5",
+            "m-1",
             "flex",
             "hover:outline outline-[#549dc9] outline-1"
           )}
@@ -74,7 +74,7 @@ export default function Categories() {
           <input
             className={classNames(
               "bg-[#316282]",
-              "pl-4",
+              "pl-3.5",
               "outline-none",
               "rounded-sm"
             )}

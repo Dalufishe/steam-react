@@ -8,11 +8,18 @@ import NavbarRight from "./NavbarRight/NavbarRight";
 
 export default function Navbar() {
   return (
-    <div className={classNames("bg-navbar", "flex", "justify-center")}>
+    <div
+      className={classNames(
+        "text-[80%]",
+        "bg-navbar",
+        "flex",
+        "justify-center"
+      )}
+    >
       <div
         className={classNames(
           "flex items-center relative",
-          "w-full max-w-[1200px]"
+          "w-full max-w-[940px]"
         )}
       >
         {/* Left */}

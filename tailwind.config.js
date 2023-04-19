@@ -8,9 +8,7 @@ module.exports = {
         main: "#1b2838",
         text1: "#c5c3c0",
       },
-      screens: {
-        lg: "912px",
-      },
+      screens: {},
     },
   },
   plugins: [],

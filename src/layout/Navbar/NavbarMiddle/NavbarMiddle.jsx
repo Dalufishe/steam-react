@@ -26,13 +26,7 @@ export default function NavbarMiddle() {
   const [commuHover, commuIsHover] = useHover();
   return (
     <ul
-      className={classNames(
-        "pl-16",
-        "hidden lg:flex",
-        "text-text1",
-        "text-[18px]",
-        "gap-4"
-      )}
+      className={classNames("pl-12", "hidden lg:flex", "text-text1", "gap-4")}
     >
       <li ref={shopHover} className="relative">
         <p className="cursor-pointer">商店</p>
