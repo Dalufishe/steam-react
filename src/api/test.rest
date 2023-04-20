@@ -1,0 +1,1 @@
+GET https://store.steampowered.com/apphoverpublic/1174180?review_score_preference=0&l=tchinese&pagev6=true

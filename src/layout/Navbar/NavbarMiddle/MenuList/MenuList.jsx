@@ -6,8 +6,9 @@ export default function MenuList({ children }) {
     <div
       className={classNames(
         "w-[88px]",
+        "z-50",
         "bg-[#171a21]",
-        "absolute top-6",
+        "absolute top-5.5",
         " shadow-sm shadow-slate-950"
       )}
     >

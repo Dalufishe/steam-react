@@ -41,6 +41,7 @@ export default function Categories() {
           {categoriesItems.map((item) => (
             //   menu item
             <li
+              key={item.name}
               className={classNames(
                 "pl-[15px] pr-[10px] py-1",
                 "flex items-center",
