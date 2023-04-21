@@ -1,7 +1,8 @@
 import { css } from "@emotion/css";
 import classNames from "classnames";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import DiscountBox from "../../../components/DiscountBox/DiscountBox";
+import specialoffers_api from "../../../api/specialoffers_api";
 
 const FAKE_DATA = [
   {
@@ -23,6 +24,12 @@ const FAKE_DATA = [
 
 // larger one
 const CardItem1 = ({ id }) => {
+  const [cardItemData, setCardItemData] = useState({});
+  useEffect(() => {
+    specialoffers_api.GET.child(id).then((data) => {
+      setCardItemData(data);
+    });
+  }, [id]);
   return (
     <div
       className={classNames(
@@ -36,7 +43,8 @@ const CardItem1 = ({ id }) => {
         className={classNames(
           "w-[306px] h-[350px]",
           css`
-            background: url(https://cdn.akamai.steamstatic.com/steam/spotlights/0b99f7e8eb21e4895e48fb3a/spotlight_image_tchinese.jpg?t=1681751007);
+            background: url(${cardItemData.image});
+            background-size: cover;
           `
         )}
       />
@@ -51,7 +59,7 @@ const CardItem1 = ({ id }) => {
           "px-3",
           css`
             background: url(https://store.akamai.steamstatic.com/public/images/v6/home/background_spotlight.jpg);
-            background-size: cover;
+            background-size: cover;f
           `
         )}
       >
@@ -66,7 +74,13 @@ const CardItem1 = ({ id }) => {
 };
 
 // smaller one
-const CardItem2 = () => {
+const CardItem2 = ({ id }) => {
+  const [cardItemData, setCardItemData] = useState({});
+  useEffect(() => {
+    specialoffers_api.GET.child(id).then((data) => {
+      setCardItemData(data);
+    });
+  }, [id]);
   return (
     <div
       className={classNames(
@@ -76,7 +90,15 @@ const CardItem2 = () => {
       )}
     >
       {/* image */}
-      <div className={classNames("w-[306px] h-[143px]")} />
+      <div
+        className={classNames(
+          "w-[306px] h-[143px]",
+          css`
+            background: url(${cardItemData.image});
+            background-size: cover;
+          `
+        )}
+      />
 
       {/* infomation */}
       <div
@@ -100,52 +122,34 @@ const CardItem2 = () => {
 };
 
 export default function SpecialOffersCard({ id }) {
-  // layout logic:
-  //   112 means one item on the first column, two items on the second colum, etc...
-  const [layout, setLayout] = useState("222");
+  const [cardData, setCardData] = useState({});
+  const currentIndex = useRef(0);
   useEffect(() => {
-    // fake data
-    for (let fakedata of FAKE_DATA) {
-      if (fakedata.id === id) {
-        setLayout(fakedata.layout);
-      }
-    }
+    specialoffers_api.GET.cards(id).then((data) => {
+      setCardData(data);
+    });
   }, []);
   return (
     <div className={classNames("flex gap-[11px]", "w-full")}>
-      {/* first column */}
-      <div className="flex flex-col gap-[15px]">
-        {layout[0] === "1" ? (
-          <CardItem1 />
-        ) : (
-          <>
-            <CardItem2 />
-            <CardItem2 />
-          </>
-        )}
-      </div>
-      {/* second column */}
-      <div className="flex flex-col gap-[15px]">
-        {layout[1] === "1" ? (
-          <CardItem1 />
-        ) : (
-          <>
-            <CardItem2 />
-            <CardItem2 />
-          </>
-        )}
-      </div>
-      {/* third column */}
-      <div className="flex flex-col gap-[15px]">
-        {layout[2] === "1" ? (
-          <CardItem1 />
-        ) : (
-          <>
-            <CardItem2 />
-            <CardItem2 />
-          </>
-        )}
-      </div>
+      {/* carditem - layout 邏輯處理 */}
+      {cardData?.layout?.split("")?.map((item, index) => {
+        if (item === "1") {
+          currentIndex.current = currentIndex.current + 1;
+          return (
+            <div key={index} className="flex flex-col gap-[15px]">
+              <CardItem1 id={cardData.child_ids[currentIndex.current - 1]} />
+            </div>
+          );
+        } else {
+          currentIndex.current = currentIndex.current + 2;
+          return (
+            <div key={index} className="flex flex-col gap-[15px]">
+              <CardItem2 id={cardData.child_ids[currentIndex.current - 2]} />
+              <CardItem2 id={cardData.child_ids[currentIndex.current - 1]} />
+            </div>
+          );
+        }
+      })}
     </div>
   );
 }

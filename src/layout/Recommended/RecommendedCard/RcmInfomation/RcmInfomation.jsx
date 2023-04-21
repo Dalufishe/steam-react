@@ -40,7 +40,7 @@ export default function RcmInfomation({ title }) {
     >
       {/* title */}
       <div className={classNames("h-[69px] pl-3", "flex items-center")}>
-        <p className="text-[24px]">{title}</p>
+        <p className="text-[24px] pt-3">{title}</p>
       </div>
       {/* photos */}
       <div className="flex flex-wrap w-full">

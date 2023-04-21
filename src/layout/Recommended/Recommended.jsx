@@ -14,10 +14,10 @@ export default function Recommended() {
         <div className={classNames("w-[940px] ")}>
           {/* title */}
           <h6 className="mb-[10px] text-[110%]">精選與推薦</h6>
-          <FteamSwiper pagination>
-            <RecommendedCard id={730} />
-            <RecommendedCard id={1928870} />
-            <RecommendedCard id={1172470} />
+          <FteamSwiper pagination auto>
+            <RecommendedCard id={1} />
+            <RecommendedCard id={2} />
+            <RecommendedCard id={3} />
           </FteamSwiper>
         </div>
       </StyledContainer>

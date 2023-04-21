@@ -103,9 +103,27 @@ const Pagination = ({ size, index, onClick }) => {
   );
 };
 
-export default function FteamSwiper({ children, pagination = false }) {
+export default function FteamSwiper({
+  children,
+  pagination = false,
+  auto = false,
+  auto_interval = 5000,
+}) {
   const size = useRef(children?.length || 1);
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (auto) {
+      setTimeout(() => {
+        console.log(index);
+        if (index + 1 === size.current) {
+          setIndex(0);
+        } else {
+          setIndex(index + 1);
+        }
+      }, auto_interval);
+    }
+  }, [index]);
 
   const handleLeftArrowClick = useCallback(() => {
     if (index - 1 < 0) {
@@ -135,6 +153,7 @@ export default function FteamSwiper({ children, pagination = false }) {
         ? children.map((item, i) => {
             return (
               <div
+                key={i}
                 className={classNames(
                   "w-full",
                   {
