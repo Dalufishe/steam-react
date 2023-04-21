@@ -9,7 +9,7 @@ Steam frontend clone using React, Redux & tailwindcss
 
 ### 如何使用
 
-`注意:` 須先下載 NodeJS 運行環境 及 npm 套件管理工具。
+`注意:` 須先下載 NodeJS 運行環境 (最新版本) 及 npm 套件管理工具。
 
 - 克隆此專案
 
