@@ -109,12 +109,16 @@ export default function FteamSwiper({
   auto = false,
   auto_interval = 5000,
 }) {
+  // size
   const size = useRef(children?.length || 1);
+  // index
   const [index, setIndex] = useState(0);
+  // timeout
+  const timeout = useRef(null);
 
   useEffect(() => {
     if (auto) {
-      setTimeout(() => {
+      timeout.current = setTimeout(() => {
         console.log(index);
         if (index + 1 === size.current) {
           setIndex(0);
@@ -179,7 +183,11 @@ export default function FteamSwiper({
         <Pagination
           size={size.current}
           index={index}
-          onClick={handlePaginationClick}
+          onClick={(i) => {
+            // 避免手動切換後計時器未取消並重製所造成的閃動問題
+            clearTimeout(timeout.current);
+            handlePaginationClick(i);
+          }}
         />
       )}
     </div>
