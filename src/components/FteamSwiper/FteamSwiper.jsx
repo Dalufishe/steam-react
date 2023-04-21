@@ -144,7 +144,7 @@ export default function FteamSwiper({ children, pagination = false }) {
                     "z-10 absolute top-0 left-0 opacity-0": i !== index,
                   },
                   css`
-                    transition: opacity 0.3s ease-out;
+                    transition: opacity 0.33s ease-out;
                   `
                 )}
               >
