@@ -4,24 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import DiscountBox from "../../../components/DiscountBox/DiscountBox";
 import specialoffers_api from "../../../api/specialoffers_api";
 
-const FAKE_DATA = [
-  {
-    id: 111,
-    layout: "222",
-    child_ids: [11, 22, 33, 44, 55, 66],
-  },
-  {
-    id: 222,
-    layout: "122",
-    child_ids: [77, 88, 99, 1010, 1111],
-  },
-  {
-    id: 333,
-    layout: "112",
-    child_ids: [1212, 1313, 1414, 1515],
-  },
-];
-
 // larger one
 const CardItem1 = ({ id }) => {
   const [cardItemData, setCardItemData] = useState({});

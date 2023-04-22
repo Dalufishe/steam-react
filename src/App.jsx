@@ -16,7 +16,7 @@ function App() {
         "overflow-auto",
         css`
           background: url(${bg}) center top no-repeat;
-          background-size: 200%;
+          background-size: cover;
         `
       )}
     >
