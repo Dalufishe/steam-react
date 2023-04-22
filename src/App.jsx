@@ -35,7 +35,12 @@ function App() {
     >
       {/* Navbar */}
       <Navbar />
-      <div className="relative w-fit mx-auto">
+      <div
+        className={classNames(
+          "relative w-fit mr-16 2xl:mx-auto",
+          "float-right 2xl:float-none"
+        )}
+      >
         {/* Categories */}
         {isEvent ? (
           <Event>
@@ -48,6 +53,7 @@ function App() {
         <div
           className={classNames(
             "absolute",
+            "hidden xl:block",
             { "top-8": !isEvent },
             { "top-[482px]": isEvent },
             {
@@ -63,14 +69,21 @@ function App() {
         </div>
       </div>
       {/* Recommended */}
-      <Recommended />
-      {/* SpecialOffers */}
-      <SpecialOffers />
-      {/* Browse-Categories */}
-      <BrowseCat />
-      {/* Browse-Fteam */}
-      <BrowseFtm />
-      {/* Footer */}
+      <div
+        className={classNames(
+          "float-right 2xl:float-none",
+          "flex flex-col items-center"
+        )}
+      >
+        <Recommended />
+        {/* SpecialOffers */}
+        <SpecialOffers />
+        {/* Browse-Categories */}
+        <BrowseCat />
+        {/* Browse-Fteam */}
+        <BrowseFtm />
+        {/* Footer */}
+      </div>
     </div>
   );
 }

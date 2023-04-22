@@ -7,20 +7,15 @@ export default function SpecialOffers() {
   return (
     // container
     <div
-      className={classNames(
-        "mt-5",
-        "text-[80%] w-full flex justify-center text-white"
-      )}
+      className={classNames("mt-5", "text-white", "text-[80%]", "w-[940px]")}
     >
-      <div className={classNames("w-[940px]")}>
-        {/* title */}
-        <h6 className="mb-[10px] text-[110%]">特別優惠</h6>
-        <FteamSwiper pagination>
-          <SpecialOffersCard id={111} />
-          <SpecialOffersCard id={222} />
-          <SpecialOffersCard id={333} />
-        </FteamSwiper>
-      </div>
+      {/* title */}
+      <h6 className="mb-[10px] text-[110%]">特別優惠</h6>
+      <FteamSwiper pagination className="h-[390px]">
+        <SpecialOffersCard id={111} />
+        <SpecialOffersCard id={222} />
+        <SpecialOffersCard id={333} />
+      </FteamSwiper>
     </div>
   );
 }

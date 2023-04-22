@@ -9,7 +9,9 @@ module.exports = {
         text1: "#c5c3c0",
         text2: "#66c0f4",
       },
-      screens: {},
+      screens: {
+        "2xl": "1450px",
+      },
     },
   },
   plugins: [],

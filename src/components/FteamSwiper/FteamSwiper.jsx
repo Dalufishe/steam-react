@@ -108,6 +108,7 @@ export default function FteamSwiper({
   pagination = false,
   auto = false,
   auto_interval = 5000,
+  className,
 }) {
   // size
   const size = useRef(children?.length || 1);
@@ -151,7 +152,7 @@ export default function FteamSwiper({
     setIndex(i);
   });
   return (
-    <div className={classNames("relative", "w-full")}>
+    <div className={classNames("relative", "w-full") + " " + className}>
       {/* left-arrow */}
       <LeftArrow onClick={handleLeftArrowClick} />
       {/* major part */}
