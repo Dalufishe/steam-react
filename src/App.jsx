@@ -7,8 +7,17 @@ import Recommended from "./layout/Recommended/Recommended";
 import bg from "./assets/bg.png";
 import SpecialOffers from "./layout/SpecialOffers/SpecialOffers";
 import Sidebar from "./layout/Sidebar/Sidebar";
+import Event from "./layout/Event/Event";
+import { useEffect, useState } from "react";
+import useRandom from "./hooks/useRandom";
 
 function App() {
+  const [isEvent, setisEvent] = useState(false);
+
+  useRandom(3, (rd) => {
+    setisEvent(rd);
+  });
+
   return (
     <div
       className={classNames(
@@ -25,9 +34,30 @@ function App() {
       <Navbar />
       <div className="relative w-fit mx-auto">
         {/* Categories */}
-        <Categories />
+        {isEvent ? (
+          <Event>
+            <Categories Event={isEvent ? Event : undefined} />
+          </Event>
+        ) : (
+          <Categories />
+        )}
         {/* Sidebar */}
-        <Sidebar />
+        <div
+          className={classNames(
+            "absolute",
+            { "top-8": !isEvent },
+            { "top-[482px]": isEvent },
+            {
+              "left-[-235px]": !isEvent,
+            },
+            {
+              "left-[50%]": isEvent,
+              "translate-x-[-710px]": isEvent,
+            }
+          )}
+        >
+          <Sidebar />
+        </div>
       </div>
       {/* Recommended */}
       <Recommended />

@@ -40,7 +40,7 @@ const MenuItem = ({ icon, offest, children }) => {
 
 export default function Sidebar() {
   return (
-    <div className={classNames("absolute top-8 left-[-235px]", "w-[210px]")}>
+    <div className={classNames("w-[210px]")}>
       {/* image */}
       <img src={SidebarImage} alt="sidebar_image" className="mb-1" />
       {/* menu */}

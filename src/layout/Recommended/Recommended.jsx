@@ -11,7 +11,7 @@ export default function Recommended() {
       className={classNames("text-[80%] w-full flex justify-center text-white")}
     >
       <StyledContainer>
-        <div className={classNames("w-[940px] ")}>
+        <div className={classNames("w-[940px] mt-8")}>
           {/* title */}
           <h6 className="mb-[10px] text-[110%]">精選與推薦</h6>
           <FteamSwiper pagination auto>
