@@ -37,17 +37,21 @@ function App() {
       <Navbar />
       <div
         className={classNames(
-          "relative w-fit mr-16 2xl:mx-auto",
+          "relative w-fit mx-auto",
           "float-right 2xl:float-none"
         )}
       >
         {/* Categories */}
         {isEvent ? (
           <Event>
-            <Categories Event={isEvent ? Event : undefined} />
+            <div className="absolute right-16 2xl:right-[50%] 2xl:translate-x-[50%]">
+              <Categories />
+            </div>
           </Event>
         ) : (
-          <Categories />
+          <div className="mr-16 2xl:mr-0">
+            <Categories />
+          </div>
         )}
         {/* Sidebar */}
         <div
@@ -61,7 +65,8 @@ function App() {
             },
             {
               "left-[50%]": isEvent,
-              "translate-x-[-710px]": isEvent,
+              "translate-x-[-550px]": isEvent,
+              "2xl:translate-x-[-710px]": isEvent,
             }
           )}
         >

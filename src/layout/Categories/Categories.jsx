@@ -13,7 +13,7 @@ const categoriesItems = [
   { name: "實驗室" },
 ];
 
-export default function Categories({}) {
+export default function Categories() {
   return (
     /* categories bar */
     <div
