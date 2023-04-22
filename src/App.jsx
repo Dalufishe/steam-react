@@ -69,7 +69,7 @@ function App() {
               },
               {
                 "left-[50%]": isEvent,
-                "translate-x-[-550px]": isEvent,
+                "translate-x-[-570px]": isEvent,
                 "2xl:translate-x-[-710px]": isEvent,
               }
             )}
