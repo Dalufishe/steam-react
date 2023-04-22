@@ -8,8 +8,10 @@ import bg from "./assets/bg.png";
 import SpecialOffers from "./layout/SpecialOffers/SpecialOffers";
 import Sidebar from "./layout/Sidebar/Sidebar";
 import Event from "./layout/Event/Event";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useRandom from "./hooks/useRandom";
+import BrowseCat from "./layout/BrowseCat/BrowseCat";
+import BrowseFtm from "./layout/BrowseFtm/BrowseFtm";
 
 function App() {
   const [isEvent, setisEvent] = useState(false);
@@ -23,7 +25,8 @@ function App() {
       className={classNames(
         "App",
         "h-screen",
-        "overflow-auto",
+        "overflow-y-auto",
+        "overflow-x-hidden",
         css`
           background: url(${bg}) center top no-repeat;
           background-size: cover;
@@ -63,7 +66,10 @@ function App() {
       <Recommended />
       {/* SpecialOffers */}
       <SpecialOffers />
-      {/* Browse */}
+      {/* Browse-Categories */}
+      <BrowseCat />
+      {/* Browse-Fteam */}
+      <BrowseFtm />
       {/* Footer */}
     </div>
   );

@@ -121,7 +121,6 @@ export default function FteamSwiper({
   useEffect(() => {
     if (auto) {
       timeout.current = setTimeout(() => {
-        console.log(index);
         if (index + 1 === size.current) {
           setIndex(0);
         } else {
