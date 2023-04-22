@@ -12,6 +12,7 @@ import { useState } from "react";
 import useRandom from "./hooks/useRandom";
 import BrowseCat from "./layout/BrowseCat/BrowseCat";
 import BrowseFtm from "./layout/BrowseFtm/BrowseFtm";
+import HotVR from "./layout/HotVR/HotVR";
 
 function App() {
   const [isEvent, setisEvent] = useState(false);
@@ -87,6 +88,8 @@ function App() {
         <BrowseCat />
         {/* Browse-Fteam */}
         <BrowseFtm />
+        {/* HOT VR */}
+        <HotVR />
         {/* Footer */}
       </div>
     </div>
