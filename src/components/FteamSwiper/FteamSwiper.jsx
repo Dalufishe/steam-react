@@ -115,6 +115,8 @@ export default function FteamSwiper({
   const [index, setIndex] = useState(0);
   // timeout
   const timeout = useRef(null);
+  // 避免手動切換後計時器過多次而重複取消所有計時器而造成的停止問題
+  const [pgntdebug, setpgntdebug] = useState(0);
 
   useEffect(() => {
     if (auto) {
@@ -127,7 +129,7 @@ export default function FteamSwiper({
         }
       }, auto_interval);
     }
-  }, [index]);
+  }, [index, pgntdebug]);
 
   const handleLeftArrowClick = useCallback(() => {
     if (index - 1 < 0) {
@@ -146,6 +148,7 @@ export default function FteamSwiper({
     }
   });
   const handlePaginationClick = useCallback((i) => {
+    setpgntdebug(pgntdebug + 1);
     setIndex(i);
   });
   return (
