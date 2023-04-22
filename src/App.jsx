@@ -17,82 +17,86 @@ import HotVR from "./layout/HotVR/HotVR";
 function App() {
   const [isEvent, setisEvent] = useState(false);
 
-  useRandom(3, (rd) => {
+  useRandom(2, (rd) => {
     setisEvent(rd);
   });
 
   return (
-    <div
-      className={classNames(
-        "App",
-        "h-screen",
-        "overflow-y-auto",
-        "overflow-x-hidden",
-        css`
-          background: url(${bg}) center top no-repeat;
-          background-size: cover;
-        `
-      )}
-    >
-      {/* Navbar */}
-      <Navbar />
+    <>
+      <div className="block md:hidden text-[30px]">此網站不支援行動裝置瀏覽</div>
       <div
         className={classNames(
-          "relative w-fit mx-auto",
-          "float-right 2xl:float-none"
+          "App",
+          "hidden md:block",
+          "h-screen",
+          "overflow-y-auto",
+          "overflow-x-hidden",
+          css`
+            background: url(${bg}) center top no-repeat;
+            background-size: cover;
+          `
         )}
       >
-        {/* Categories */}
-        {isEvent ? (
-          <Event>
-            <div className="absolute right-16 2xl:right-[50%] 2xl:translate-x-[50%]">
-              <Categories />
-            </div>
-          </Event>
-        ) : (
-          <div className="mr-16 2xl:mr-0">
-            <Categories />
-          </div>
-        )}
-        {/* Sidebar */}
+        {/* Navbar */}
+        <Navbar />
         <div
           className={classNames(
-            "absolute",
-            "hidden xl:block",
-            { "top-8": !isEvent },
-            { "top-[482px]": isEvent },
-            {
-              "left-[-235px]": !isEvent,
-            },
-            {
-              "left-[50%]": isEvent,
-              "translate-x-[-550px]": isEvent,
-              "2xl:translate-x-[-710px]": isEvent,
-            }
+            "relative w-fit mx-auto",
+            "float-right 2xl:float-none"
           )}
         >
-          <Sidebar />
+          {/* Categories */}
+          {isEvent ? (
+            <Event>
+              <div className="absolute right-16 2xl:right-[50%] 2xl:translate-x-[50%]">
+                <Categories />
+              </div>
+            </Event>
+          ) : (
+            <div className="mr-16 2xl:mr-0">
+              <Categories />
+            </div>
+          )}
+          {/* Sidebar */}
+          <div
+            className={classNames(
+              "absolute",
+              "hidden xl:block",
+              { "top-8": !isEvent },
+              { "top-[482px]": isEvent },
+              {
+                "left-[-235px]": !isEvent,
+              },
+              {
+                "left-[50%]": isEvent,
+                "translate-x-[-550px]": isEvent,
+                "2xl:translate-x-[-710px]": isEvent,
+              }
+            )}
+          >
+            <Sidebar />
+          </div>
+        </div>
+        {/* Recommended */}
+        <div
+          className={classNames(
+            "float-right 2xl:float-none",
+            "flex flex-col items-center"
+          )}
+        >
+          <Recommended />
+          {/* SpecialOffers */}
+          <SpecialOffers />
+          {/* Browse-Categories */}
+          <BrowseCat />
+          {/* Browse-Fteam */}
+          <BrowseFtm />
+          {/* HOT VR */}
+          <HotVR />
+          {/* Footer */}
         </div>
       </div>
-      {/* Recommended */}
-      <div
-        className={classNames(
-          "float-right 2xl:float-none",
-          "flex flex-col items-center"
-        )}
-      >
-        <Recommended />
-        {/* SpecialOffers */}
-        <SpecialOffers />
-        {/* Browse-Categories */}
-        <BrowseCat />
-        {/* Browse-Fteam */}
-        <BrowseFtm />
-        {/* HOT VR */}
-        <HotVR />
-        {/* Footer */}
-      </div>
-    </div>
+    </>
   );
 }
 

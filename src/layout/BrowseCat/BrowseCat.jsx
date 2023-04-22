@@ -14,9 +14,8 @@ const CatItem = ({ img, bg, children }) => {
       <div
         className={classNames(
           "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]",
-          "w-full h-full hover:w-[235px] hover:h-[233px]",
+          "w-full h-full hover:scale-[1.05] transition-all duration-200",
           css`
-            transition: width 0.1s ease-out, height 0.1s ease-out;
             background: url(${img});
             &:hover {
               filter: brightness(1.25);
