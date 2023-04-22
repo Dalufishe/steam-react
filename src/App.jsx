@@ -6,6 +6,7 @@ import Recommended from "./layout/Recommended/Recommended";
 
 import bg from "./assets/bg.png";
 import SpecialOffers from "./layout/SpecialOffers/SpecialOffers";
+import Sidebar from "./layout/Sidebar/Sidebar";
 
 function App() {
   return (
@@ -22,8 +23,12 @@ function App() {
     >
       {/* Navbar */}
       <Navbar />
-      {/* Categories */}
-      <Categories />
+      <div className="relative w-fit mx-auto">
+        {/* Categories */}
+        <Categories />
+        {/* Sidebar */}
+        <Sidebar />
+      </div>
       {/* Recommended */}
       <Recommended />
       {/* SpecialOffers */}
