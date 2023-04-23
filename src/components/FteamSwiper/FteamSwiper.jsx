@@ -135,16 +135,20 @@ export default function FteamSwiper({
     if (index - 1 < 0) {
       // to end
       setIndex(size.current - 1);
+      clearTimeout(timeout.current);
     } else {
       setIndex(index - 1);
+      clearTimeout(timeout.current);
     }
   });
   const handleRightArrowClick = useCallback(() => {
     if (index + 1 === size.current) {
       // to begin
       setIndex(0);
+      clearTimeout(timeout.current);
     } else {
       setIndex(index + 1);
+      clearTimeout(timeout.current);
     }
   });
   const handlePaginationClick = useCallback((i) => {
