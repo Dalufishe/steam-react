@@ -1,6 +1,7 @@
 import { css } from "@emotion/css";
 import classNames from "classnames";
 import React from "react";
+import DiscountBoxSmall from "../../components/DiscountBoxSmall/DiscountBoxSmall";
 
 const HotVRCard = ({ price, image }) => {
   return (
@@ -71,7 +72,9 @@ export default function HotVR() {
         />
         <HotVRCard
           image="https://cdn.akamai.steamstatic.com/steam/apps/617830/header_292x136.jpg?t=1667473729"
-          price="免費遊玩"
+          price={
+            <DiscountBoxSmall discount="-60%" prevPrice={499} price={199} />
+          }
         />
         <HotVRCard
           image="https://cdn.akamai.steamstatic.com/steam/apps/1032670/header_292x136.jpg?t=1630300278"
