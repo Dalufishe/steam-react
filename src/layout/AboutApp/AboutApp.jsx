@@ -21,7 +21,7 @@ export default function AboutApp() {
           關於
         </Typography>
         <Typography className="pb-3">
-          steam-react (Fteam) 是一個開源項目，旨在使用
+          steam-react（Fteam）是一個開源項目，旨在使用
           React、Redux、MUI、tailwindcss 等技術實現的 steam 前端克隆網頁。
         </Typography>
         <Typography className="pb-3">
@@ -34,7 +34,7 @@ export default function AboutApp() {
           </Link>
         </Typography>
         <Typography className="pb-4">
-          項目開源倉庫地址 github{" "}
+          本項目倉庫地址 github{" "}
           <Link href="https://github.com/Clone-Gang/steam-react">點擊</Link>
         </Typography>
         <Typography className="pb-3">

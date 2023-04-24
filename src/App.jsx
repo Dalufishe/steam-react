@@ -47,18 +47,18 @@ function App() {
         <div
           className={classNames(
             "relative w-fit mx-auto",
-            "float-right 2xl:float-none"
+            "float-none xl:float-right 2xl:float-none"
           )}
         >
           {/* Categories */}
           {isEvent ? (
             <Event>
-              <div className="absolute right-16 2xl:right-[50%] 2xl:translate-x-[50%]">
+              <div className="mx-auto xl:mr-16 2xl:mx-auto">
                 <Categories />
               </div>
             </Event>
           ) : (
-            <div className="mr-16 2xl:mr-0">
+            <div className="mr-0 xl:mr-16 2xl:mr-0">
               <Categories />
             </div>
           )}
@@ -74,7 +74,7 @@ function App() {
               },
               {
                 "left-[50%]": isEvent,
-                "translate-x-[-570px]": isEvent,
+                "translate-x-[-590px]": isEvent,
                 "2xl:translate-x-[-710px]": isEvent,
               }
             )}
@@ -85,7 +85,8 @@ function App() {
         {/* Recommended */}
         <div
           className={classNames(
-            "float-right 2xl:float-none",
+            "w-fit mx-auto",
+            "float-none xl:float-right 2xl:float-none",
             "flex flex-col items-center"
           )}
         >
