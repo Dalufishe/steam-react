@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/steam-react/static/css/main.9c9f9c7f.css",
-    "main.js": "/steam-react/static/js/main.3f9fa0d6.js",
+    "main.css": "/steam-react/static/css/main.128e3e6e.css",
+    "main.js": "/steam-react/static/js/main.51ffeddf.js",
     "static/media/bg.png": "/steam-react/static/media/bg.24a4fbc4e924964bae11.png",
     "static/media/sidebarimage.png": "/steam-react/static/media/sidebarimage.e3db33adbc1946706967.png",
     "static/media/logo.png": "/steam-react/static/media/logo.28149a79632ed1986880.png",
     "index.html": "/steam-react/index.html",
-    "main.9c9f9c7f.css.map": "/steam-react/static/css/main.9c9f9c7f.css.map",
-    "main.3f9fa0d6.js.map": "/steam-react/static/js/main.3f9fa0d6.js.map"
+    "main.128e3e6e.css.map": "/steam-react/static/css/main.128e3e6e.css.map",
+    "main.51ffeddf.js.map": "/steam-react/static/js/main.51ffeddf.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c9f9c7f.css",
-    "static/js/main.3f9fa0d6.js"
+    "static/css/main.128e3e6e.css",
+    "static/js/main.51ffeddf.js"
   ]
 }
