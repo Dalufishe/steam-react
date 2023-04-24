@@ -13,6 +13,7 @@ import useRandom from "./hooks/useRandom";
 import BrowseCat from "./layout/BrowseCat/BrowseCat";
 import BrowseFtm from "./layout/BrowseFtm/BrowseFtm";
 import HotVR from "./layout/HotVR/HotVR";
+import AboutApp from "./layout/AboutApp/AboutApp";
 
 function App() {
   const [isEvent, setisEvent] = useState(false);
@@ -23,7 +24,9 @@ function App() {
 
   return (
     <>
-      <div className="block md:hidden text-[30px]">此網站不支援行動裝置瀏覽</div>
+      <div className="block md:hidden text-[30px]">
+        此網站不支援行動裝置瀏覽
+      </div>
       <div
         className={classNames(
           "App",
@@ -37,6 +40,8 @@ function App() {
           `
         )}
       >
+        {/* AboutApp */}
+        <AboutApp />
         {/* Navbar */}
         <Navbar />
         <div
