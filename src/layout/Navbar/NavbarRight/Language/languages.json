@@ -1,0 +1,14 @@
+[
+    {
+        "id": "tchinese",
+        "name": "繁體中文"
+    },
+    {
+        "id": "english",
+        "name": "English（英文）"
+    },
+    {
+        "id": "issue",
+        "name": "回報翻譯問題"
+    }
+]

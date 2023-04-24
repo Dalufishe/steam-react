@@ -3,6 +3,7 @@ import React from "react";
 
 import { ImDownload } from "react-icons/im";
 import { AiOutlineCaretDown } from "react-icons/ai";
+import Language from "./Language/Language";
 
 export default function NavbarRight() {
   return (
@@ -33,15 +34,7 @@ export default function NavbarRight() {
       </div>
       <div>|</div>
       {/* language */}
-      <div
-        className={classNames(
-          "hover:text-white cursor-pointer",
-          "flex items-center gap-1"
-        )}
-      >
-        <p>語言</p>
-        <AiOutlineCaretDown size="9px" />
-      </div>
+      <Language />
     </div>
   );
 }

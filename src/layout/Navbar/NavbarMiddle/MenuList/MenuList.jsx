@@ -8,7 +8,7 @@ export default function MenuList({ children }) {
         "w-[88px]",
         "z-50",
         "bg-[#171a21]",
-        "absolute top-5.5",
+        "absolute top-5",
         " shadow-sm shadow-slate-950"
       )}
     >
