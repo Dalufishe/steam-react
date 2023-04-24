@@ -6,14 +6,16 @@ import reduxThunk from "redux-thunk";
 
 // reducers
 
+import language_r from "./reducers/language_r/language_r";
 
 const reducer = combineReducers({
+  language_r,
 });
 
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: [],
+  whitelist: [language_r],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducer);
