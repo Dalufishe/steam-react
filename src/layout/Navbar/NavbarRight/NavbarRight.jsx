@@ -19,7 +19,7 @@ export default function NavbarRight() {
         className={classNames(
           "bg-[#5c7e10]",
           "flex items-center gap-1",
-          "px-1 py-0.5",
+          "px-[9px] py-0.5",
           "hover:text-white",
           "cursor-pointer"
         )}
@@ -36,7 +36,7 @@ export default function NavbarRight() {
       <div
         className={classNames(
           "hover:text-white cursor-pointer",
-          "flex items-center"
+          "flex items-center gap-1"
         )}
       >
         <p>語言</p>
