@@ -6,8 +6,10 @@ module.exports = {
       colors: {
         navbar: "#171a21",
         main: "#1b2838",
+        main2: "#2a475e",
         text1: "#c5c3c0",
         text2: "#66c0f4",
+        text3: "#4f94bc",
       },
       screens: {
         "2xl": "1450px",

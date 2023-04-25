@@ -105,7 +105,7 @@ function App() {
             <HotVR />
           </div>
         </div>
-        {/* Bottom */}
+        {/* BOTTOM */}
         <div
           className={css`
             background: linear-gradient(
@@ -123,11 +123,6 @@ function App() {
             )}
           >
             {/* Popular */}
-            <Popular />
-            <Popular />
-            <Popular />
-            <Popular />
-            <Popular />
             <Popular />
           </div>
         </div>
