@@ -113,6 +113,69 @@ const STEAM_FAKE_DATA = {
         "https://cdn.akamai.steamstatic.com/steam/apps/1091500/header_tchinese.jpg?t=1680026109",
     },
   ],
+  popular_1: [
+    {
+      id: 0,
+      name: "心淵夢境",
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1701520/capsule_184x69.jpg?t=1682413373",
+      
+      },
+    {
+      id: 1,
+      name: "Don Duality: Initiation",
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2388170/capsule_184x69.jpg?t=1682432471",
+    },
+    {
+      id: 2,
+      name: "星詠之詩",
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1434540/capsule_184x69.jpg?t=1682108495",
+    },
+    {
+      id: 3,
+      name: "Mohism: Battle of Words",
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1463780/capsule_184x69.jpg?t=1681819277",
+    },
+    {
+      id: 4,
+      name: "ROCKMAN EXE 合集2",
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1798020/capsule_184x69_tchinese.jpg?t=1681862528",
+    },
+    {
+      id: 5,
+      name: "原點計劃",
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1498040/capsule_184x69.jpg?t=1681450718",
+    },
+    {
+      id: 6,
+      name: "EVERSPACE™ 2",
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1128920/capsule_184x69.jpg?t=1681964856",
+    },
+    {
+      id: 7,
+      name: "DREDGE",
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1562430/capsule_184x69.jpg?t=1680787342",
+    },
+    {
+      id: 8,
+      name: "萊莎的鍊金工房３ ～終結之鍊金術士與秘密鑰匙～",
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/1999770/capsule_184x69_tchinese.jpg?t=1681347648",
+    },
+    {
+      id: 9,
+      name: "Resident Evil 4",
+      image:
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/capsule_184x69.jpg?t=1680840402",
+    },
+  ],
 };
 
 export default STEAM_FAKE_DATA;
