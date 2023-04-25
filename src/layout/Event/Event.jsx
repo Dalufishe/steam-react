@@ -11,6 +11,7 @@ export default function Event({ children }) {
         css`
           background: url(https://cdn.akamai.steamstatic.com/steam/clusters/frontpage/727ea0038db57df9987985bd/page_bg_tchinese.jpg?t=1682097863);
           background-size: cover;
+          background-position: center;
         `
       )}
     >
