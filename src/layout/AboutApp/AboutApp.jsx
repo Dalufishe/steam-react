@@ -22,20 +22,28 @@ export default function AboutApp() {
         </Typography>
         <Typography className="pb-3">
           steam-react（Fteam）是一個開源項目，旨在使用
-          React、Redux、MUI、tailwindcss 等技術實現的 steam 前端克隆網頁。
+          React、Redux、MUI、tailwindcss 等技術實現的 Steam 前端克隆網頁。
         </Typography>
         <Typography className="pb-3">
           本項目不屬於 Steam® 版權所有，為 Dalufishe 開發，並不以營利為目的。
         </Typography>
         <Typography className="pb-4">
           你可以在這裡聯繫到我{" "}
-          <Link href="http://discordapp.com/users/520869862650937364">
+          <Link
+            target="_blank"
+            href="http://discordapp.com/users/520869862650937364"
+          >
             點擊
           </Link>
         </Typography>
         <Typography className="pb-4">
           本項目倉庫地址 github{" "}
-          <Link href="https://github.com/Clone-Gang/steam-react">點擊</Link>
+          <Link
+            target="_blank"
+            href="https://github.com/Clone-Gang/steam-react"
+          >
+            點擊
+          </Link>
         </Typography>
         <Typography className="pb-3">
           本項目中

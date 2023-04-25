@@ -47,7 +47,7 @@ const HotVRCard = ({ price, image }) => {
 export default function HotVR() {
   return (
     <div
-      className={classNames("mt-10", "text-white", "text-[80%]", "w-[940px]")}
+      className={classNames("mt-10 mb-20", "text-white", "text-[80%]", "w-[940px]")}
     >
       <div className="flex justify-between">
         {/* title */}
