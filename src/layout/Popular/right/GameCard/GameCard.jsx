@@ -15,7 +15,7 @@ const GameCard = ({ tags, name, active = false }) => {
         css`
           background: ${theme.palette.custom.background_light[1]};
         `,
-        "transition-opacity",
+        "transition-opacity duration-300",
         { "opacity-100": active, "opacity-0": !active }
       )}
     >
