@@ -3,18 +3,20 @@ import { Box, Fade, useTheme } from "@mui/material";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
 
-const GameCard = ({ name }) => {
+const GameCard = ({ tags, name, active = false }) => {
   const theme = useTheme();
 
   return (
     <div
       className={classNames(
-        "mt-[39px]",
-        "w-full",
+        "absolute bottom-0",
+        "w-full h-[771px]",
         "p-3",
         css`
           background: ${theme.palette.custom.background_light[1]};
-        `
+        `,
+        "transition-opacity",
+        { "opacity-100": active, "opacity-0": !active }
       )}
     >
       {/* title */}
@@ -52,7 +54,7 @@ const GameCard = ({ name }) => {
       </div>
       {/* group */}
       <div className="mb-1">
-        {["類銀河戰士惡魔城", "橫向捲軸", "探索", "2D 平台"].map((item) => (
+        {tags.map((item) => (
           <span
             key={item}
             className={classNames(

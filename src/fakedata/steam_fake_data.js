@@ -119,61 +119,71 @@ const STEAM_FAKE_DATA = {
       name: "心淵夢境",
       image:
         "https://cdn.cloudflare.steamstatic.com/steam/apps/1701520/capsule_184x69.jpg?t=1682413373",
-      
-      },
+      tags: ["類銀河戰士惡魔城", "橫向捲軸", "探索", "2D 平台"],
+    },
     {
       id: 1,
       name: "Don Duality: Initiation",
       image:
         "https://cdn.cloudflare.steamstatic.com/steam/apps/2388170/capsule_184x69.jpg?t=1682432471",
+      tags: ["休閒", "管理", "輕度 Rogue", "卡牌遊戲"],
     },
     {
       id: 2,
       name: "星詠之詩",
       image:
         "https://cdn.cloudflare.steamstatic.com/steam/apps/1434540/capsule_184x69.jpg?t=1682108495",
+      tags: ["策略", "輕度 Rogue", "牌組製作", "卡牌對戰"],
     },
+
     {
       id: 3,
       name: "Mohism: Battle of Words",
       image:
         "https://cdn.cloudflare.steamstatic.com/steam/apps/1463780/capsule_184x69.jpg?t=1681819277",
+      tags: ["視覺小說", "解謎", "推理", "劇情豐富"],
     },
     {
       id: 4,
       name: "ROCKMAN EXE 合集2",
       image:
         "https://cdn.cloudflare.steamstatic.com/steam/apps/1798020/capsule_184x69_tchinese.jpg?t=1681862528",
+      tags: ["角色扮演", "動作", "動作角色扮演", "像素風格"],
     },
     {
       id: 5,
       name: "原點計劃",
       image:
         "https://cdn.cloudflare.steamstatic.com/steam/apps/1498040/capsule_184x69.jpg?t=1681450718",
+      tags: ["動作類 Rogue", "動作", "像素風格", "2D"],
     },
     {
       id: 6,
       name: "EVERSPACE™ 2",
       image:
         "https://cdn.cloudflare.steamstatic.com/steam/apps/1128920/capsule_184x69.jpg?t=1681964856",
+      tags: ["冒險", "太空", "飛行", "太空船"],
     },
     {
       id: 7,
       name: "DREDGE",
       image:
         "https://cdn.cloudflare.steamstatic.com/steam/apps/1562430/capsule_184x69.jpg?t=1680787342",
+      tags: ["探索", "釣魚", "洛夫克拉夫特式", "冒險"],
     },
     {
       id: 8,
       name: "萊莎的鍊金工房３ ～終結之鍊金術士與秘密鑰匙～",
       image:
         "https://cdn.cloudflare.steamstatic.com/steam/apps/1999770/capsule_184x69_tchinese.jpg?t=1681347648",
+      tags: ["探索", "女主人翁", "日系角色扮演", "收集型平台"],
     },
     {
       id: 9,
       name: "Resident Evil 4",
       image:
         "https://cdn.cloudflare.steamstatic.com/steam/apps/2050650/capsule_184x69.jpg?t=1680840402",
+      tags: ["動作", "恐怖", "生存恐怖", "第三人稱射擊"],
     },
   ],
 };

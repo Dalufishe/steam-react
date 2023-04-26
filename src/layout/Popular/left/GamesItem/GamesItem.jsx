@@ -8,6 +8,7 @@ import { useTheme } from "@mui/material";
 const GamesItem = ({
   children,
   image,
+  tags,
   price = 0,
   active = false,
   onHover = () => {},
@@ -47,16 +48,18 @@ const GamesItem = ({
         <p className="text-[15px] text-[#c7d5e0]">{children}</p>
         <SiWindows11 className="ml-1 w-4 h-4 text-[#384959] opacity-80" />
         <p className="flex text-[#384959]">
-          <div>類銀河戰士惡魔城</div>
-          <div>, 橫向捲軸</div>
-          <div>, 探索</div>
-          <div>, 2D 平台</div>
+          {tags.map((tag, index) => (
+            <div className="mr-1">
+              {tag}
+              {tags?.length - 1 === index ? "" : ","}
+            </div>
+          ))}
         </p>
       </div>
       {/* price */}
       <div
         className={classNames(
-          "absolute top-[50%] right-8 translate-y-[-50%]",
+          "absolute top-[50%] right-6 translate-y-[-50%]",
           "text-white text-[15px]"
         )}
       >

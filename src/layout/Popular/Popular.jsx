@@ -8,6 +8,7 @@ import GamesItem from "./left/GamesItem/GamesItem";
 import GameCard from "./right/GameCard/GameCard";
 import popular_api from "../../api/popular_api";
 import Tabs from "./left/Tabs/Tabs";
+import GameCardContainer from "./right/GameCardContainer/GameCardContainer";
 
 export default function Popular() {
   const [games, setGames] = useState([]);
@@ -16,7 +17,7 @@ export default function Popular() {
   useEffect(() => {
     popular_api.GET().then((data) => {
       setGames(data);
-      setActive(games[0].id);
+      setActive(data[0].id);
     });
   }, []);
 
@@ -77,6 +78,7 @@ export default function Popular() {
                   setActive(game?.id);
                 }}
                 image={game?.image}
+                tags={game?.tags}
               >
                 {game?.name}
               </GamesItem>
@@ -85,8 +87,17 @@ export default function Popular() {
         </div>
       </div>
       {/* RIGHT */}
-      <div className={classNames("w-[308px] ml-[14px]", "flex items-stretch")}>
-        {<GameCard name={games?.[active]?.name} />}
+      <div className={classNames("w-[308px] ml-[14px]", "mt-[39px]")}>
+        <GameCardContainer>
+          {games.map((game) => (
+            <GameCard
+              key={game?.id}
+              active={game?.id === active}
+              name={game?.name}
+              tags={game?.tags}
+            />
+          ))}
+        </GameCardContainer>
       </div>
     </div>
   );
