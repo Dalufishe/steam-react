@@ -1,13 +1,12 @@
 # Steam React
-
 ---
 
 簡易版 Steam 前端克隆使用 React、Redux 和 TailwindCSS。
+Simple version of Steam front-end clone using React, Redux and TailwindCSS.
 
 > 不屬於 Steam® 版權所有，為 Dalufishe 開發，並不以營利為目的之開源項目。
 
 ### 使用應用程序
-
 ---
 
 線上版網址: <a href="https://clone-gang.github.io/steam-react/">https://clone-gang.github.io/steam-react/</a>
@@ -16,13 +15,15 @@
 
 ![](./docs/assets/steam-clone.png)
 
+### 運行所需
+--- 
+> _注意，以下為開發者文檔_
+
+- Node.js (latest version)
+- npm (latest version)
+
 ### 運行應用程序
-
 ---
-
-> _注意，此處為開發者文檔_
-
-您須先建置 NodeJS 運行環境 (最新版本) 及 npm 套件管理工具才能運行正常此應用程序。
 
 - 克隆此專案
 
