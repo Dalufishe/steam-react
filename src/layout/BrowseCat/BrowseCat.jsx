@@ -17,6 +17,7 @@ const CatItem = ({ img, bg, children }) => {
           "w-full h-full hover:scale-[1.05] transition-all duration-200",
           css`
             background: url(${img});
+            background-size: cover;
             &:hover {
               filter: brightness(1.25);
             }
@@ -30,6 +31,7 @@ const CatItem = ({ img, bg, children }) => {
             "w-full h-full",
             css`
               background: ${bg};
+              background-size: cover;
             `
           )}
         />
@@ -52,7 +54,7 @@ export default function BrowseCat() {
       <FteamSwiper pagination>
         <CatCard>
           <CatItem
-            img="https://store.steampowered.com/categories/homepageimage/category/visual_novel?cc=us&l=tchinese"
+            img="https://scontent.xx.fbcdn.net/v/t1.15752-9/300221991_443631117789816_795488058365260451_n.png?_nc_cat=107&ccb=1-7&_nc_sid=aee45a&_nc_ohc=tvy7AQ_jH90AX8un5pC&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdS1k0aQAMWEjfUxeT0vodmW5AhYlIXosqcyuH5kfy1aCA&oe=6471C09E"
             bg="linear-gradient(rgba(0,0,0,0), rgb(139,0,0) 100%)"
           >
             視覺小說
