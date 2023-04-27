@@ -6,7 +6,6 @@ const theme = createTheme({
       background_light: [
         "linear-gradient(to right, #c6e6f8 5%, #95bcd3 95%)",
         "linear-gradient( to right, #95bbd4 5%,#859bac 95%)",
-        "#95bbd4",
       ],
     },
   },

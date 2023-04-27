@@ -72,8 +72,7 @@ const GamesItem = ({
             "absolute",
             "right-[-14px]",
             "w-[14px] h-[69px]",
-
-            `bg-[${theme.palette.custom.background_light[2]}]`
+            "bg-bglight"
           )}
         ></div>
       )}
