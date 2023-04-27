@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/steam-react/static/css/main.ba34b8fb.css",
-    "main.js": "/steam-react/static/js/main.65176f1d.js",
+    "main.js": "/steam-react/static/js/main.196fbba2.js",
     "static/media/bg.png": "/steam-react/static/media/bg.24a4fbc4e924964bae11.png",
     "static/media/sidebarimage.png": "/steam-react/static/media/sidebarimage.e3db33adbc1946706967.png",
     "static/media/logo.png": "/steam-react/static/media/logo.28149a79632ed1986880.png",
     "index.html": "/steam-react/index.html",
     "main.ba34b8fb.css.map": "/steam-react/static/css/main.ba34b8fb.css.map",
-    "main.65176f1d.js.map": "/steam-react/static/js/main.65176f1d.js.map"
+    "main.196fbba2.js.map": "/steam-react/static/js/main.196fbba2.js.map"
   },
   "entrypoints": [
     "static/css/main.ba34b8fb.css",
-    "static/js/main.65176f1d.js"
+    "static/js/main.196fbba2.js"
   ]
 }
